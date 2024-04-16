@@ -1,11 +1,21 @@
-const http = require('http');
-var fs = require('fs');
+const express = require('express');
+var path = require("path")
+ 
 
 
-http.createServer(function (req, res) {
-  fs.readFile('home.html', function(err, data) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(data);
-    return res.end();
-  });
-}).listen(8080);
+const app = express();
+
+app.set('view engine', 'ejs');
+app.use(express.static('scripts'))
+app.use(express.static('styles'))
+app.use(express.static('images'))
+
+
+app.get("/", (req, res) => {
+
+})
+
+
+app.listen(3000);
+console.log(`Running on http://localhost:3000`);
+

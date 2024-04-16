@@ -12,7 +12,16 @@ app.use(express.static('images'))
 
 
 app.get("/", (req, res) => {
+  res.render('index', {
+    members: [
+      {name:"Matheus Karam Westphalen", possition: "Chair", face: "./matheus/face.png", flag:  "./matheus/flag.png"},
+      {name:"Rowan Richter", possition: "Co-Chair", face: "./rowen/face.png", flag:  "./rowen/flag.png"},
+      {name:"Laura Boettcher", possition: "Webmaster", face: "./laura/face.png", flag:  "./laura/flag.png"},
+      {name:"Katerina Latushka", possition: "Secretary", face: "./kate/face.png", flag:  "./kate/flag.png"},
+      {name:"Malcolm Stone", possition: "Webmaster", face: "", flag:  "./rowen/flag.png"},
 
+    ]
+  });
 })
 
 

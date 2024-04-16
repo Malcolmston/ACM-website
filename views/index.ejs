@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+</head>
+
+<body>
+
+    <header>
+
+        <img src="./maincrest.svg" alt="crest">
+
+        <img src="./rollins.svg" alt="logo">
+
+        <div class="row">
+            <a>about us</a>
+            <a>events</a>
+            <a>open source</a>
+        </div>
+
+        <input type="button" value="<join us>">
+
+    </header>
+
+    <div class="body">
+        <div>
+            <div class="first_row">
+                <img src="./left.svg" class="left" alt="left">
+                <div class="box">
+                    <h1>ACM</h1>
+                    <h2>Association for Computing Machinery</h2>
+                    <span>Biggest Computer Science student organization at Rollins College</span>
+                </div>
+                <img src="./right.svg" class="right" alt="right">
+                <img src="./cmcImg1.svg" class="lgo" alt="logo-2">
+            </div>
+        </div>
+        <div>
+            <div class="second-row">
+                <h1>Meet the board</h1>
+
+                <div class='parent'>
+                    <% for(member of members) { %>
+                        <%- include("person",member) %>
+                            <% } %>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

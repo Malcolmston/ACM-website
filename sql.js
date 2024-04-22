@@ -52,6 +52,43 @@ const sequelize = new Sequelize({
     }
   }
 
+
+  async function add () {
+    let arr = fs.readdirSync("events");
+    /*
+    ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+*/
+
+    arr = arr.map(async function (fname) {
+      let  data = fs.readFileSync( "events/"+fname, { encoding: 'utf8', flag: 'r' });
+      switch(fname) {
+        case "a.svg":
+          return await addEvent("headquater of electronic arts", new Date(2024, 2, 21, 0,0,0), new Date(2024, 2, 21, 13,0,0), new Date(2024, 2, 21, 17,0,0), data);
+        case "b.svg": 
+          return await addEvent("orlando code camp", new Date(2024, 1, 24, 0,0,0), new Date(2024, 1, 24, 7,30,0), new Date(2024, 2, 21, 18,0,0), data);
+        case "c.svg":
+          return await addEvent("social", new Date(2024, 0, 24,0,0,0), new Date(2024, 0, 24,  17,15,0), null, data);
+        case "d.svg":
+          return await addEvent("computer science alumni panel", new Date(2023, 2, 29, 0,0,0), new Date(2023, 2, 29, 13,0,0), new Date(2023, 2, 29, 14,15,0), data);
+        case "e.svg":
+            return await addEvent("research particimant", null, null, null, data);
+        case "f.svg":
+            return await addEvent("A conversation with", new Date(2023, 9, 28, 0, 0,0), new Date(2023, 9, 28, 12, 30,0), new Date(2023, 9, 28, 13, 30,0),data)
+        default:
+          return false;
+      }
+
+    })
+
+    let a = (await Promise.all(arr));
+    if( a.filter(_ => _).length != a.length ) return false;
+    return true;
+  }
+
+ 
+
   (async function () {
     try {
         await sequelize.authenticate();
@@ -61,5 +98,7 @@ const sequelize = new Sequelize({
       }
 
       await sequelize.sync({ force: true });
+
+      console.log( await add() );
 
   })();

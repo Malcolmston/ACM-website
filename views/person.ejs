@@ -1,0 +1,50 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<div class="v42_61 child">
+    <div class="v44_300" id="<%= name.replace(/\s/g, '_') %>_a"></div>
+    <div class="v42_53" id="<%= name.replace(/\s/g, '_') %>_b"> <%= name %> </div>
+    <div class="v42_55" id="<%= name.replace(/\s/g, '_') %>_c">  <%= possition %> </div>
+    <div class="v42_58" id="<%= name.replace(/\s/g, '_') %>_d"></div>
+    
+</div>
+
+
+    <script>
+         url_person = "<%= face %>";
+         url_flag = "<%= flag %>";
+
+
+         person_place = $("#<%= name.replace(/\s/g, '_') %>_a")
+         flag = $("#<%= name.replace(/\s/g, '_') %>_d")
+
+
+
+        if( " <%= name %>".includes("Laura") ){
+            person_place.css({
+             background: `url(${url_person})`,
+            "background-repeat": "no-repeat",
+            "background-position": "center center",
+            "background-size": "110%",
+
+        })
+        } else {
+            person_place.css({
+             background: `url(${url_person})`,
+            "background-repeat": "no-repeat",
+            "background-position": "center center",
+            "background-size": "cover"
+        })
+        }
+
+        flag.css({
+            background: `url(${url_flag})`,
+            "background-repeat": "no-repeat",
+            "background-position": "center center",
+            "background-size": "75%"
+        })
+       
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* The header incorporates the the nave bar and imagas incliding the logo and Rollins crest */
+header {
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+  }
+/* within the header of this document this scales the images to fit within the page height*/
+header img:nth-child(1) {
+    zoom: 60%;
+}
+
+  header img:nth-child(2) {
+    position: absolute;
+    top: 10px;
+    zoom: 80%;
+  }
+  header .row {
+    display: inline;
+    position: absolute;
+    left: 27%;
+    top: 15;
+  }
+  header .row > a {
+    color: #3183ff;
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 50px;
+  }
+    /* symple on hover action on nave elements in the nave bar to show activity*/
+  header .row > a:hover {
+    text-decoration: underline;
+  }
+  header .row > a:nth-child(1):after {
+    content: " |";
+  }
+  header .row > a:nth-child(2):after {
+    content: " |";
+  }
+  header input[type="button"] {
+    zoom: 75%;
+    border: none;
+    width: 276px;
+    height: 77px;
+    background: #3183ff;
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: lowercase;
+    color: #fff;
+    position: absolute;
+    left: 82%;
+    top: 20px;
+  }
+  /* this adds an simple border action to the [Join us] button; adding a black border to the button*/
+  header input[type="button"]:active {
+    border: 1px solid #000;
+  }
+
+/* end of header */

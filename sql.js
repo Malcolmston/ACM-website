@@ -87,7 +87,10 @@ const sequelize = new Sequelize({
     return true;
   }
 
- 
+  async function getData () {
+    return await Events.findAll({attributes: ['id', 'data', 'name'], raw: true});
+  }
+
 
   (async function () {
     try {
@@ -100,5 +103,4 @@ const sequelize = new Sequelize({
       await sequelize.sync({ force: true });
 
       console.log( await add() );
-
   })();

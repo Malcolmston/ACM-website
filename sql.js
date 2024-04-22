@@ -31,6 +31,24 @@ const sequelize = new Sequelize({
     to: {type: DataTypes.DATE}
   });
   
+/**
+ * a function desigend to allow users to create events
+ * @param {String} name the name of the event
+ * @param {Date} start the date that the event occurred
+ * @param {Data} from the starting time. this can be the same as the data, however this can be more specivic, incliding the exact timestamp
+ * @param {Data} to the ending time of this event
+ * @param {Blob} file a file to show the event off
+ * @returns {Boolean} true if the event was successfully created and false otherwise
+ */
+  async function addEvent (name, start, from, to, file) {
+    try {
+    await Events.create({name, start, from, to, file})
+    return true
+    } catch (e) {
+        return false;
+    }
+  }
+
   (async function () {
     try {
         await sequelize.authenticate();

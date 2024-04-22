@@ -87,7 +87,7 @@ const sequelize = new Sequelize({
     return true;
   }
 
-  async function getData () {
+export default async function getData () {
     return await Events.findAll({attributes: ['id', 'data', 'name'], raw: true});
   }
 

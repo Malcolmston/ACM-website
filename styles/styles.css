@@ -75,6 +75,7 @@ header img:nth-child(1) {
   /* third gradent pattern */
   .body > div:nth-child(3) {
     background: linear-gradient(180deg, #fff 0%, #3183ff 91%);
+    text-align: center;
   }
 /* formats the locathion of the events segment*/
 .body > div:nth-child(3) .third-row .events {
@@ -104,10 +105,69 @@ header img:nth-child(1) {
     position: absolute;
   font-family: 'Quicksand';
   font-style: normal;
-  font-weight: 700;
-  font-size: 53px;
-  line-height: 66px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 122px;
   color: #FFFFFF;
-  border: 1px solid #8FBCFF;
-  bottom: -14px;
+  top: 250%;
+
+  margin-left: 30%;
+  margin-right: auto;
   }
+
+  .body > div:nth-child(3) .third-row .sub_buttom .cent {
+    position: absolute;
+    zoom: 62%;
+    float: left;
+    margin-top: -60px;
+    top: 280%;
+    left: 20%;
+  }
+
+  .body > div:nth-child(3) .third-row .sub_buttom .findUs {
+    position: absolute;
+    zoom: 72%;
+    margin-top: -60px;
+    left: 38%;
+    top: 286%
+  }
+/* confetee */
+/* this is the confetee in the main center of the botton panel */
+  .body > div:nth-child(3) .third-row .sub_buttom .cent {
+    position: absolute;
+    zoom: 72%;
+    margin-top: -60px;
+    left: 38%;
+    top: 306%
+  }
+
+  /* extra confett for the center as extention to match computer style */
+  .body > div:nth-child(3) .third-row .sub_buttom .cent_left {
+    position: absolute;
+    zoom: 72%;
+    margin-top: -60px;
+    left: 18%;
+    top: 310%
+  }
+
+  /* right most image of confetee */
+  .body > div:nth-child(3) .third-row .sub_buttom .right {
+    position: absolute;
+    zoom: 72%;
+    float: right;
+    margin-top: -60px;
+    top: 280%;
+    right: 0;
+  }
+
+
+/* image on left bottom of confetee */
+  .body > div:nth-child(3) .third-row .sub_buttom .left {
+    position: absolute;
+    zoom: 65%;
+    float: left;
+    margin-top: -60px;
+    top: 290%;
+    left: 0;
+  }
+  /* confetee end */

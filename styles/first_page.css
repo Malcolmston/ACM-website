@@ -1,0 +1,91 @@
+
+/* body */
+.body > div {
+    height: 100%;
+    width: 100%;
+  }
+  /* the firts dive in the segemts that make up this document */
+  .body > div:nth-child(1) {
+    background: linear-gradient(180deg, #3183ff 0%, #bebdff 100%);
+  }
+
+  .body > div:nth-child(1) .first_row {
+    position: absolute;
+    z-index: 99999;
+    margin-left: 50px;
+    margin-right: 50px;
+    top: 130px;
+    width: calc(100% - (50px * 2));
+    height: 3.2in;
+    /* dissregard, is made to avoid color overflow*/
+    background-color: transparent;
+  }
+
+    /* Biggest Computer Science student organization at Rollins College */
+  .body > div:nth-child(1) .first_row .box {
+    color: #fff;
+    float: left;
+    margin-left: calc(10% - 10px);
+    font-family: "Archivo Black", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 122px;
+    margin-top: 60px;
+    width: 50%;
+    height: 3.2in;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  /* genaric text and sty rools for header elemets located in the first box */
+  .body > div:nth-child(1) .first_row .box > h1 {
+    margin-top: -15px;
+  }
+  .body > div:nth-child(1) .first_row .box > h2 {
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: -89px;
+  }
+
+  /* puses text to a display size that is suitable for display*/
+  .body > div:nth-child(1) .first_row .box > span {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Quicksand";
+    width: calc((span-font-size * 13));
+    display: block;
+    word-wrap: break-word;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30.94px;
+    margin-top: 30px;
+  }
+
+  /* the larger image of the acm logo, not the official logo */
+  .body > div:nth-child(1) .first_row .lgo {
+    zoom: 62%;
+    float: right;
+    margin-top: 0px;
+    margin-right: 6%;
+  }
+
+  /* convetie on the left side of this element */
+  .body > div:nth-child(1) .first_row .left {
+    position: absolute;
+    zoom: 62%;
+    float: left;
+    margin-top: -60px;
+    left: -85;
+  }
+ /* convetie on the right side of this element */
+  .body > div:nth-child(1) .first_row .right {
+    position: absolute;
+    zoom: 62%;
+    float: right;
+    margin-top: -60px;
+    right: -85;
+  }
+  /* end of the first div */

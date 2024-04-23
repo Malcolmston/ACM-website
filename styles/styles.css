@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap");
+@import url("first_page.css");
+@import url("second_page.css");
+
+
 body {
   margin: 0;
   padding: 0;
@@ -68,193 +72,42 @@ header img:nth-child(1) {
 
 /* end of header */
 
-
-/* body */
-.body > div {
-    height: 100%;
-    width: 100%;
+  /* third gradent pattern */
+  .body > div:nth-child(3) {
+    background: linear-gradient(180deg, #fff 0%, #3183ff 91%);
   }
-  /* the firts dive in the segemts that make up this document */
-  .body > div:nth-child(1) {
-    background: linear-gradient(180deg, #3183ff 0%, #bebdff 100%);
+/* formats the locathion of the events segment*/
+.body > div:nth-child(3) .third-row .events {
+  position: relative;
+  top: -5.6in;
+  margin-left: 100px;
+  margin-right: 50px;
+
+  height: calc( calc( calc(300px * 2) +  140px) + 2in);
+  overflow-y: auto;
+}
+
+  .body > div:nth-child(3) .third-row .events .row {
+    width: auto;
+    height: 300px;
+    margin-bottom: 140px;
   }
 
-  .body > div:nth-child(1) .first_row {
+  .body > div:nth-child(3) .third-row .events .row svg {
+    width: 300px;
+    height: 400px;
+  }
+
+
+  /* Ready to elevate your CS experience? */
+  .body > div:nth-child(3) .third-row h2 {
     position: absolute;
-    z-index: 99999;
-    margin-left: 50px;
-    margin-right: 50px;
-    top: 130px;
-    width: calc(100% - (50px * 2));
-    height: 3.2in;
-    /* dissregard, is made to avoid color overflow*/
-    background-color: transparent;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 53px;
+  line-height: 66px;
+  color: #FFFFFF;
+  border: 1px solid #8FBCFF;
+  bottom: -14px;
   }
-
-    /* Biggest Computer Science student organization at Rollins College */
-  .body > div:nth-child(1) .first_row .box {
-    color: #fff;
-    float: left;
-    margin-left: calc(10% - 10px);
-    font-family: "Archivo Black", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 122px;
-    margin-top: 60px;
-    width: 50%;
-    height: 3.2in;
-    background-color: transparent;
-    text-align: center;
-  }
-
-  /* genaric text and sty rools for header elemets located in the first box */
-  .body > div:nth-child(1) .first_row .box > h1 {
-    margin-top: -15px;
-  }
-  .body > div:nth-child(1) .first_row .box > h2 {
-    font-family: "Quicksand";
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 38px;
-    margin-top: -89px;
-  }
-
-  /* puses text to a display size that is suitable for display*/
-  .body > div:nth-child(1) .first_row .box > span {
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Quicksand";
-    width: calc((span-font-size * 13));
-    display: block;
-    word-wrap: break-word;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30.94px;
-    margin-top: 30px;
-  }
-
-  /* the larger image of the acm logo, not the official logo */
-  .body > div:nth-child(1) .first_row .lgo {
-    zoom: 62%;
-    float: right;
-    margin-top: 0px;
-    margin-right: 6%;
-  }
-
-  /* convetie on the left side of this element */
-  .body > div:nth-child(1) .first_row .left {
-    position: absolute;
-    zoom: 62%;
-    float: left;
-    margin-top: -60px;
-    left: -85;
-  }
- /* convetie on the right side of this element */
-  .body > div:nth-child(1) .first_row .right {
-    position: absolute;
-    zoom: 62%;
-    float: right;
-    margin-top: -60px;
-    right: -85;
-  }
-  /* end of the first div */
-
-
-  /* second div, and adds the seccond gratend pattern*/
-  .body > div:nth-child(2) {
-    background: linear-gradient(180deg, #bdbcff, #fff 47%);
-  }
-
-  /* Meet the board and forces the 2 dives to be 1 cohesive page*/
-  .body > div:nth-child(2) .second-row {
-    position: absolute;
-    z-index: 99999;
-    margin-left: 190px;
-    margin-right: 50px;
-    padding-left: 10px;
-    padding-right: 30px;
-    top: 6.2in;
-    max-width: calc((row-width - 20px));
-    height: calc((row-height + 40));
-    background-color: transparent;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 13.4px 2px rgba(255,255,255,0.54);
-    text-align: center;
-  }
-
-  .body > div:nth-child(2) .second-row .parent {
-    text-align: center;
-  }
-
-  .body > div:nth-child(2) .second-row .child {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    top: -40;
-    left: 0;
-    zoom: 80%;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 13.4px 2px rgba(255,255,255,0.54);
-    margin-left: 20px;
-  }
-
-  /* members of the bored */
-  .body > div:nth-child(2) .second-row .v44_300 {
-    width: 189px;
-    height: 189px;
-    border: 2px solid #7548f4;
-    border-radius: 123px;
-    box-shadow: 0px 4px 5px rgba(0,0,0,0.36);
-    overflow: hidden;
-  }
-  .body > div:nth-child(2) .second-row .v42_53 {
-    width: 216px;
-    height: 70px;
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 35px;
-    overflow: wrap;
-    color: #000;
-  }
-  .body > div:nth-child(2) .second-row .v42_55 {
-    width: 189.37px;
-    height: 23.09px;
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center;
-    color: #7648f5;
-  }
-  .body > div:nth-child(2) .second-row .v42_58 {
-  /* Ellipse 6 */
-    width: 41.57px;
-    height: 41.57px;
-    border-radius: 123px;
-    position: relative;
-    top: -135;
-    left: 10;
-    opacity: 1;
-    background-color: #7648f5 !important;
-  }
-  .body > div:nth-child(2) .second-row .v42_59 {
-    position: relative;
-    top: -135;
-    left: 10;
-  }
-  /* letter spaceing */
-  .body > div:nth-child(2) .second-row h1 {
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 100px;
-    color: #fff;
-    margin-top: -25px;
-  }
-  /* end of bored members */
-  /* end of second div */

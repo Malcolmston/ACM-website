@@ -23,7 +23,7 @@ const sequelize = new Sequelize({
     name: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
+        unique: true,
     },
 
     start: {
@@ -77,8 +77,8 @@ const sequelize = new Sequelize({
         case "f.svg":
             return await addEvent("A conversation with", new Date(2023, 9, 28, 0, 0,0), new Date(2023, 9, 28, 12, 30,0), new Date(2023, 9, 28, 13, 30,0),data)
         default:
-          return false;
-      }
+          return await addEvent(fname, null, null, null,data)
+        }
 
     })
 
@@ -87,9 +87,9 @@ const sequelize = new Sequelize({
     return true;
   }
 
-export default async function getData () {
-    return await Events.findAll({attributes: ['id', 'data', 'name'], raw: true});
-  }
+module.exports = async function getData () {
+    return await Events.findAll({attributes: ['id', 'file', 'name'], raw: true});
+  };
 
 
   (async function () {

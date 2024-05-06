@@ -1,0 +1,120 @@
+  /* third gradent pattern */
+  .body > div:nth-child(3) {
+    background: linear-gradient(180deg, #fff 0%, #3183ff 91%);
+    text-align: center;
+  }
+/* formats the locathion of the events segment*/
+.body > div:nth-child(3) .third-row .events {
+  position: relative;
+  top: -5in;
+  margin-left: 100px;
+  margin-right: 50px;
+
+  height: calc( calc( calc(300px * 2) +  140px) + 2in);
+  overflow-y: auto;
+}
+
+  .body > div:nth-child(3) .third-row .events .row {
+    width: auto;
+    height: 300px;
+    margin-bottom: 140px;
+  }
+
+  .body > div:nth-child(3) .third-row .events .row svg {
+    width: 300px;
+    height: 400px;
+  }
+
+
+  /* Ready to elevate your CS experience? */
+  .body > div:nth-child(3) .third-row h2 {
+    position: absolute;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 122px;
+  color: #FFFFFF;
+  top: 260%;
+
+  margin-left: 30%;
+  margin-right: auto;
+  }
+
+
+  .body > div:nth-child(3) .third-row .sub_buttom .cent {
+    position: absolute;
+    zoom: 62%;
+    float: left;
+    margin-top: -60px;
+    top: 280%;
+    left: 20%;
+  }
+
+  .body > div:nth-child(3) .third-row .sub_buttom .findUs {
+    position: absolute;
+    zoom: 72%;
+    margin-top: -60px;
+    left: 38%;
+    top: 300%
+  }
+/* confetee */
+/* this is the confetee in the main center of the botton panel */
+  .body > div:nth-child(3) .third-row .sub_buttom .cent {
+    position: absolute;
+    zoom: 72%;
+    margin-top: -60px;
+    left: 38%;
+    top: 306%
+  }
+
+  /* extra confett for the center as extention to match computer style */
+  .body > div:nth-child(3) .third-row .sub_buttom .cent_left {
+    position: absolute;
+    zoom: 72%;
+    margin-top: -60px;
+    left: 18%;
+    top: 310%
+  }
+
+  /* right most image of confetee */
+  .body > div:nth-child(3) .third-row .sub_buttom .right {
+    position: absolute;
+    zoom: 72%;
+    float: right;
+    margin-top: -60px;
+    top: 280%;
+    right: 0;
+  }
+
+
+/* image on left bottom of confetee */
+  .body > div:nth-child(3) .third-row .sub_buttom .left {
+    position: absolute;
+    zoom: 65%;
+    float: left;
+    margin-top: -60px;
+    top: 290%;
+    left: 0;
+  }
+  /* confetee end */
+
+
+  .body > div:nth-child(3) .third-row input[type="button"] {
+    zoom: 60%;
+    border: none;
+    width: 276px;
+    height: 77px;
+    background: #3183ff;
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: lowercase;
+    color: #fff;
+
+    position: absolute;
+    top: 280%;
+    left: 44%;
+  }

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap");
 @import url("first_page.css");
 @import url("second_page.css");
+@import url("third_page.css");
 
 
 body {
@@ -29,27 +30,31 @@ header img:nth-child(1) {
     display: inline;
     position: absolute;
     left: 27%;
-    top: 15;
+    top: 20;
+
+    margin-left: 10%;
+    margin-right: auto;
   }
   header .row > a {
     color: #3183ff;
     font-family: "Quicksand", sans-serif;
     font-style: normal;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 20px;
+    line-height: 30px;
+
   }
     /* symple on hover action on nave elements in the nave bar to show activity*/
   header .row > a:hover {
     text-decoration: underline;
   }
   header .row > a:nth-child(1):after {
-    content: " |";
+    content: "  | ";
   }
   header .row > a:nth-child(2):after {
-    content: " |";
+    content: "  | ";
   }
   header input[type="button"] {
-    zoom: 75%;
+    zoom: 65%;
     border: none;
     width: 276px;
     height: 77px;
@@ -70,104 +75,8 @@ header img:nth-child(1) {
     border: 1px solid #000;
   }
 
+ .body {
+  height: 100%;
+ } 
 /* end of header */
 
-  /* third gradent pattern */
-  .body > div:nth-child(3) {
-    background: linear-gradient(180deg, #fff 0%, #3183ff 91%);
-    text-align: center;
-  }
-/* formats the locathion of the events segment*/
-.body > div:nth-child(3) .third-row .events {
-  position: relative;
-  top: -5.6in;
-  margin-left: 100px;
-  margin-right: 50px;
-
-  height: calc( calc( calc(300px * 2) +  140px) + 2in);
-  overflow-y: auto;
-}
-
-  .body > div:nth-child(3) .third-row .events .row {
-    width: auto;
-    height: 300px;
-    margin-bottom: 140px;
-  }
-
-  .body > div:nth-child(3) .third-row .events .row svg {
-    width: 300px;
-    height: 400px;
-  }
-
-
-  /* Ready to elevate your CS experience? */
-  .body > div:nth-child(3) .third-row h2 {
-    position: absolute;
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 122px;
-  color: #FFFFFF;
-  top: 250%;
-
-  margin-left: 30%;
-  margin-right: auto;
-  }
-
-  .body > div:nth-child(3) .third-row .sub_buttom .cent {
-    position: absolute;
-    zoom: 62%;
-    float: left;
-    margin-top: -60px;
-    top: 280%;
-    left: 20%;
-  }
-
-  .body > div:nth-child(3) .third-row .sub_buttom .findUs {
-    position: absolute;
-    zoom: 72%;
-    margin-top: -60px;
-    left: 38%;
-    top: 286%
-  }
-/* confetee */
-/* this is the confetee in the main center of the botton panel */
-  .body > div:nth-child(3) .third-row .sub_buttom .cent {
-    position: absolute;
-    zoom: 72%;
-    margin-top: -60px;
-    left: 38%;
-    top: 306%
-  }
-
-  /* extra confett for the center as extention to match computer style */
-  .body > div:nth-child(3) .third-row .sub_buttom .cent_left {
-    position: absolute;
-    zoom: 72%;
-    margin-top: -60px;
-    left: 18%;
-    top: 310%
-  }
-
-  /* right most image of confetee */
-  .body > div:nth-child(3) .third-row .sub_buttom .right {
-    position: absolute;
-    zoom: 72%;
-    float: right;
-    margin-top: -60px;
-    top: 280%;
-    right: 0;
-  }
-
-
-/* image on left bottom of confetee */
-  .body > div:nth-child(3) .third-row .sub_buttom .left {
-    position: absolute;
-    zoom: 65%;
-    float: left;
-    margin-top: -60px;
-    top: 290%;
-    left: 0;
-  }
-  /* confetee end */

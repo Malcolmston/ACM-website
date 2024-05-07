@@ -1,5 +1,5 @@
 const express = require('express');
-var path = require("path")
+const path = require("path")
 const getData = require("./sql.js");
 
 Array.prototype.group = function(amount) {
@@ -15,14 +15,12 @@ Array.prototype.group = function(amount) {
   return out;
 }
 
-
 const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static('scripts'))
 app.use(express.static('styles'))
 app.use(express.static('images'))
-
 
 app.get("/", async (req, res) => {
   res.render('index', {
@@ -32,12 +30,10 @@ app.get("/", async (req, res) => {
       {name:"Laura Boettcher", possition: "Webmaster", face: "./laura/face.png", flag:  "./laura/flag.png"},
       {name:"Katerina Latushka", possition: "Secretary", face: "./kate/face.png", flag:  "./kate/flag.png"},
       {name:"Malcolm Stone", possition: "Webmaster", face: "", flag:  "./rowen/flag.png"},
-
     ],
     events: (await getData()).group(4)
   });
 })
-
 
 app.listen(3001);
 console.log(`Running on http://localhost:3001`);

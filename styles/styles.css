@@ -90,3 +90,68 @@ header img:nth-child(1) {
     border: 1px solid #000;
   }
 /* end of header */
+
+footer {
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+}
+
+/* within the header of this document this scales the images to fit within the page height*/
+footer img:nth-child(1) {
+  zoom: 60%;
+}
+
+footer img:nth-child(2) {
+  top: 10px;
+  zoom: 80%;
+}
+footer .row {
+  display: inline;
+  position: absolute;
+  left: 27%;
+  top: 316%;
+
+  margin-left: 10%;
+  margin-right: auto;
+}
+footer .row > a {
+  color: #3183ff;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+
+}
+  /* symple on hover action on nave elements in the nave bar to show activity*/
+  footer .row > a:hover {
+  text-decoration: underline;
+}
+footer .row > a:nth-child(1):after {
+  content: "  | ";
+}
+footer .row > a:nth-child(2):after {
+  content: "  | ";
+}
+footer input[type="button"] {
+  zoom: 65%;
+  border: none;
+  width: 276px;
+  height: 77px;
+  background: #3183ff;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: lowercase;
+  color: #fff;
+  position: absolute;
+  left: 82%;
+  top: 316%;
+}
+/* this adds an simple border action to the [Join us] button; adding a black border to the button*/
+footer input[type="button"]:active {
+  border: 1px solid #000;
+}
+/* end of header */

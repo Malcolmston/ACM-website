@@ -134,3 +134,4 @@ dist
 *.sqlite
 *.db
 
+package-lock.json

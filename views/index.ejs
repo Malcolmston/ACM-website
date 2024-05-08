@@ -1,0 +1,154 @@
+<head>
+<link rel="stylesheet" href="./styles.css"  type="text/css">
+
+</head>
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <div class="event"></div>
+      </div>
+
+<header>
+    <img src="./maincrest.svg"/>
+
+    <img src="./rollins.svg"/>
+
+    <div class="row">
+        <a>about us</a>
+        <a>events</a>
+        <a>open source</a>
+    </div>
+    
+    <input type="button" value="<join us>"/>
+        
+</header>
+
+<div class="body">
+    <div>
+        <div class="first_row">
+            <img src="./left.svg" class="left"/>
+            <div class="box">
+                <h1>ACM</h1>
+                <h2>Association for Computing Machinery</h2>
+                <span>Biggest Computer Science student organization at Rollins College</span>
+            </div>
+            <img src="./right.svg" class="right"/>
+            <img src="./cmcImg1.svg" class="lgo"/>
+        </div>
+    </div>
+    <div>
+        <div class="second-row">
+            <h1>Meet the board</h1>
+
+            <div class='parent'>
+                <% for(member of members) { %>
+                    <%- include("person",member) %>
+                <% } %>
+
+            </div>
+        
+
+
+
+            
+        </div>
+    </div>
+    <div>
+        <div class="third-row">
+            <div class="events">
+
+                <% for(var g of events) { %>
+                <div class="row">
+                    <% for(let photo of g) { %>
+                    <%- photo.file %>
+                    <% }%>
+                </div>
+                <% } %>
+              
+            </div>
+
+            <h2>Ready to elevate your CS experience?</h2>   
+            
+            <input type="button" value="<join us>"/>
+
+            
+            <div class="sub_buttom">
+                <img src="./pageEnds/pageend.svg" class="cent"/>
+                <img src="./pageEnds/centpageend.svg" class="cent_left"/>
+
+
+                <img src="./pageEnds/rpageend.svg" class="right"/>
+
+                <img src="./left.svg" class="left"/>
+
+                <img src="/findUs.svg" class="findUs"/>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<footer>
+    <img src="./maincrest.svg"/>
+    <img src="./rollins.svg"/>
+
+    <div class="row">
+        <a>about us</a>
+        <a>events</a>
+        <a>open source</a>
+    </div>
+    
+    <input type="button" value="<join us>"/>
+        
+</footer>
+
+
+</body>
+
+<script>
+    const events = document.querySelectorAll(".events div > *");
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    function findParentAs(element, find ="svg") {
+        let t = element
+
+        if( element == null ) return null;
+        if( t.tagName != find && t.tagName != "HTML") {
+            t = t.parentNode;
+            return findParentAs(t, find);
+        } else {
+            return t;
+        }
+
+    }
+
+    events.forEach(element => {
+        element.addEventListener("click", (event) => {
+            let t = event.target
+            var svg =  findParentAs(t);
+            openNav()
+
+            var p = svg.cloneNode(true);
+
+            document.querySelector(".event").innerHTML = "";
+            document.querySelector(".event").appendChild(p);
+
+        })
+    })
+
+    window.onload = function() {
+        //openNav();
+
+        console.log( events )
+    }
+
+
+    </script>

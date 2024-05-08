@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap");
+@import url("first_page.css");
+@import url("second_page.css");
+@import url("third_page.css");
+@import url("popup.css");
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -25,27 +45,31 @@ header img:nth-child(1) {
     display: inline;
     position: absolute;
     left: 27%;
-    top: 15;
+    top: 20;
+
+    margin-left: 10%;
+    margin-right: auto;
   }
   header .row > a {
     color: #3183ff;
     font-family: "Quicksand", sans-serif;
     font-style: normal;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 20px;
+    line-height: 30px;
+
   }
     /* symple on hover action on nave elements in the nave bar to show activity*/
   header .row > a:hover {
     text-decoration: underline;
   }
   header .row > a:nth-child(1):after {
-    content: " |";
+    content: "  | ";
   }
   header .row > a:nth-child(2):after {
-    content: " |";
+    content: "  | ";
   }
   header input[type="button"] {
-    zoom: 75%;
+    zoom: 65%;
     border: none;
     width: 276px;
     height: 77px;
@@ -65,196 +89,69 @@ header img:nth-child(1) {
   header input[type="button"]:active {
     border: 1px solid #000;
   }
-
 /* end of header */
 
+footer {
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+}
 
-/* body */
-.body > div {
-    height: 100%;
-    width: 100%;
-  }
-  /* the firts dive in the segemts that make up this document */
-  .body > div:nth-child(1) {
-    background: linear-gradient(180deg, #3183ff 0%, #bebdff 100%);
-  }
+/* within the header of this document this scales the images to fit within the page height*/
+footer img:nth-child(1) {
+  zoom: 60%;
+}
 
-  .body > div:nth-child(1) .first_row {
-    position: absolute;
-    z-index: 99999;
-    margin-left: 50px;
-    margin-right: 50px;
-    top: 130px;
-    width: calc(100% - (50px * 2));
-    height: 3.2in;
-    /* dissregard, is made to avoid color overflow*/
-    background-color: transparent;
-  }
+footer img:nth-child(2) {
+  top: 10px;
+  zoom: 80%;
+}
+footer .row {
+  display: inline;
+  position: absolute;
+  left: 27%;
+  top: 316%;
 
-    /* Biggest Computer Science student organization at Rollins College */
-  .body > div:nth-child(1) .first_row .box {
-    color: #fff;
-    float: left;
-    margin-left: calc(10% - 10px);
-    font-family: "Archivo Black", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 122px;
-    margin-top: 60px;
-    width: 50%;
-    height: 3.2in;
-    background-color: transparent;
-    text-align: center;
-  }
+  margin-left: 10%;
+  margin-right: auto;
+}
+footer .row > a {
+  color: #3183ff;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
 
-  /* genaric text and sty rools for header elemets located in the first box */
-  .body > div:nth-child(1) .first_row .box > h1 {
-    margin-top: -15px;
-  }
-  .body > div:nth-child(1) .first_row .box > h2 {
-    font-family: "Quicksand";
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 38px;
-    margin-top: -89px;
-  }
-
-  /* puses text to a display size that is suitable for display*/
-  .body > div:nth-child(1) .first_row .box > span {
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Quicksand";
-    width: calc((span-font-size * 13));
-    display: block;
-    word-wrap: break-word;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 30.94px;
-    margin-top: 30px;
-  }
-
-  /* the larger image of the acm logo, not the official logo */
-  .body > div:nth-child(1) .first_row .lgo {
-    zoom: 62%;
-    float: right;
-    margin-top: 0px;
-    margin-right: 6%;
-  }
-
-  /* convetie on the left side of this element */
-  .body > div:nth-child(1) .first_row .left {
-    position: absolute;
-    zoom: 62%;
-    float: left;
-    margin-top: -60px;
-    left: -85;
-  }
- /* convetie on the right side of this element */
-  .body > div:nth-child(1) .first_row .right {
-    position: absolute;
-    zoom: 62%;
-    float: right;
-    margin-top: -60px;
-    right: -85;
-  }
-  /* end of the first div */
-
-
-  /* second div, and adds the seccond gratend pattern*/
-  .body > div:nth-child(2) {
-    background: linear-gradient(180deg, #bdbcff, #fff 47%);
-  }
-
-  /* Meet the board and forces the 2 dives to be 1 cohesive page*/
-  .body > div:nth-child(2) .second-row {
-    position: absolute;
-    z-index: 99999;
-    margin-left: 190px;
-    margin-right: 50px;
-    padding-left: 10px;
-    padding-right: 30px;
-    top: 6.2in;
-    max-width: calc((row-width - 20px));
-    height: calc((row-height + 40));
-    background-color: transparent;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 13.4px 2px rgba(255,255,255,0.54);
-    text-align: center;
-  }
-
-  .body > div:nth-child(2) .second-row .parent {
-    text-align: center;
-  }
-
-  .body > div:nth-child(2) .second-row .child {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    top: -40;
-    left: 0;
-    zoom: 80%;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 13.4px 2px rgba(255,255,255,0.54);
-    margin-left: 20px;
-  }
-
-  /* members of the bored */
-  .body > div:nth-child(2) .second-row .v44_300 {
-    width: 189px;
-    height: 189px;
-    border: 2px solid #7548f4;
-    border-radius: 123px;
-    box-shadow: 0px 4px 5px rgba(0,0,0,0.36);
-    overflow: hidden;
-  }
-  .body > div:nth-child(2) .second-row .v42_53 {
-    width: 216px;
-    height: 70px;
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 35px;
-    overflow: wrap;
-    color: #000;
-  }
-  .body > div:nth-child(2) .second-row .v42_55 {
-    width: 189.37px;
-    height: 23.09px;
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center;
-    color: #7648f5;
-  }
-  .body > div:nth-child(2) .second-row .v42_58 {
-  /* Ellipse 6 */
-    width: 41.57px;
-    height: 41.57px;
-    border-radius: 123px;
-    position: relative;
-    top: -135;
-    left: 10;
-    opacity: 1;
-    background-color: #7648f5 !important;
-  }
-  .body > div:nth-child(2) .second-row .v42_59 {
-    position: relative;
-    top: -135;
-    left: 10;
-  }
-  /* letter spaceing */
-  .body > div:nth-child(2) .second-row h1 {
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 100px;
-    color: #fff;
-    margin-top: -25px;
-  }
-  /* end of bored members */
-  /* end of second div */
+}
+  /* symple on hover action on nave elements in the nave bar to show activity*/
+  footer .row > a:hover {
+  text-decoration: underline;
+}
+footer .row > a:nth-child(1):after {
+  content: "  | ";
+}
+footer .row > a:nth-child(2):after {
+  content: "  | ";
+}
+footer input[type="button"] {
+  zoom: 65%;
+  border: none;
+  width: 276px;
+  height: 77px;
+  background: #3183ff;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: lowercase;
+  color: #fff;
+  position: absolute;
+  left: 82%;
+  top: 316%;
+}
+/* this adds an simple border action to the [Join us] button; adding a black border to the button*/
+footer input[type="button"]:active {
+  border: 1px solid #000;
+}
+/* end of header */

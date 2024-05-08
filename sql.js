@@ -100,7 +100,7 @@ module.exports = async function getData () {
         console.error('Unable to connect to the database:', error);
       }
 
-      await sequelize.sync({ force: true });
+      await sequelize.sync({ force: false });
 
       console.log( await add() );
   })();
